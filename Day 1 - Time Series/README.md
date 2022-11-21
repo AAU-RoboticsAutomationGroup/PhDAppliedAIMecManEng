@@ -1,6 +1,6 @@
 # Time Series Analysis Assignment
 ## Description
-Short description of the assignment, what is it about, what is the motivation etc.
+You’ll use time-series classification to classify screwing process on screwing data collected from AAU screw cell. Specifically, you'll build a deep learning model that more accurately classify 2000+ data samples. In total, there are four categories. 
 
 ## Getting started
 Describe any setup and installation requirements e.g. Python version and packages, link to Colab e.g. make "Open in Colab" link, or anaconda setup instructions.
