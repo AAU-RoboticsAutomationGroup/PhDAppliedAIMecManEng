@@ -9,4 +9,4 @@ Describe any setup and installation requirements e.g. Python version and package
 What task(s) should the student do e.g. implement certain lines of code?
 
 ## Getting help
-Ask on Teams or contact XXX at email xxx@example.com.
+Ask on Teams or contact Chen Li at email cl@mp.aau.dk.
