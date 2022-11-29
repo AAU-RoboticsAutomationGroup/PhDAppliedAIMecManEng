@@ -80,19 +80,20 @@ Data acquisition + Data Preparocess -> utils.py
 DL Model Traning -> Conv1D_org_data.py
 Configuration file -> configure.py 
 ```
+We provide detailed comments in each script to help you understand the code.
 
-## Training model (Conv1D)
+## 3. Training model (Conv1D)
 ```
 python Conv1D_org_data.py --is_org_data_only_process=Yes --is_flt=Yes
 ```
 - **is_org_data_only_process** - only take the torque data
 - **is_flt** - the filtered dataset which removes several large size data samples
 
-## Assignment instructions
+## 4. Assignment instructions
 Several lines are missing in *ConvLSTM2D_org_data.py*, *LSTM_org_data.py* and *TRM_org_data.py*.
 
 You will need to use *Conv1D_org_data.py* as reference and fill the missing code in the above scripts. You may want to fine-tune
 the parameters of the *configure.py* file.
 
-## Getting help
+## 5. Getting help
 Ask on Teams or contact Chen Li at email cl@mp.aau.dk.
