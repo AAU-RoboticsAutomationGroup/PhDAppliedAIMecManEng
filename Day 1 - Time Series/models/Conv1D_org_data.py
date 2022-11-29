@@ -3,7 +3,7 @@ import keras
 import json
 import argparse
 
-from keras import layers, utils, models
+from keras import layers, models
 from sklearn.metrics import f1_score, precision_score, recall_score, confusion_matrix
 from keras.callbacks import ModelCheckpoint
 from utils.configure import Config
@@ -96,39 +96,29 @@ if __name__ == "__main__":
     elif (args.is_org_data_only_process == 'No') and (args.is_flt == 'Yes'):
         X_train, X_test, y_train, y_test = load_org_data_process_task(cfg.org_aursad_flt_path, expand_flag=True)
     
-    # set the path for model, image
+    # set the path for the results including the model, loss, acc, f1, recall, and precision
     model_path, loss_img, acc_img, precision, recall, f1 = cfg.model_parameters_set_process_task("Conv1D_org_data", args.is_org_data_only_process, args.is_flt)
 
+    # print the shape of training data sample
     print(X_train.shape[1:])
-
-    # callbacks = [keras.callbacks.EarlyStopping(patience=cfg.patience, restore_best_weights=True)]
+    # save the best model
     checkpoint = ModelCheckpoint(model_path, monitor='val_acc', verbose=1, save_best_only=True,
                                  mode='max')
     callbacks_list = [checkpoint]
 
 
-    # # construct Conv1D
+    # # construct Conv1D_org_data
     # model = conv1D_scr(X_train.shape[1:], cfg)
     # # # training model
     # history = model.fit(X_train, y_train, epochs=cfg.epochs, batch_size=cfg.batch_size,
     #                     validation_data=(X_test, y_test), callbacks=callbacks_list, verbose=1)
-    # history = model.fit(X_train, y_train, epochs=cfg.epochs, batch_size=cfg.batch_size,
-    #                     validation_data=(X_test, y_test), callbacks=callbacks)
 
-    # construct multi-head Conv1D
+    # construct multi-head Conv1D_org_data
     model = Multi_head_conv1D_scr(X_train.shape[1:], cfg)
     history = model.fit([X_train, X_train, X_train], y_train, epochs=cfg.epochs, batch_size=cfg.batch_size,
                         validation_data=([X_test, X_test, X_test], y_test), callbacks=callbacks_list, verbose=1)
-    # history = model.fit([X_train, X_train, X_train], y_train, epochs=cfg.epochs, batch_size=cfg.batch_size,
-    #           validation_data=([X_test, X_test, X_test], y_test), callbacks=callbacks)
 
-    # training model
-    #
-    # compile model
-    # opt = tf.optimizers.Adam(cfg.lr)
-    # model.compile(optimizer=opt, loss=cfg.loss, metrics='acc')
 
-    # the training will stop if the accuracy is not improved after "patinence" epochs - using early stopping for efficient
     # save model
     model.save(model_path)
 
@@ -138,10 +128,11 @@ if __name__ == "__main__":
     # get f1, precision and recall scores
     model = keras.models.load_model(model_path)
 
-    # # Conv1D
-    y_pred1 = model.predict(X_test)
-    # Multi-head Conv1D
-    # y_pred1 = model.predict([X_test, X_test, X_test])
+    # # Conv1D_org_data
+    # y_pred1 = model.predict(X_test)
+
+    # Multi-head Conv1D_org_data
+    y_pred1 = model.predict([X_test, X_test, X_test])
 
     y_pred = np.argmax(y_pred1, axis=1)
 

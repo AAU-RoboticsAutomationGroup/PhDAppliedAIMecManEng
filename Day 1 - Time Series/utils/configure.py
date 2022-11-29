@@ -14,13 +14,19 @@ class Config:
         # original aursad (process + task)
         self.org_data_only_process = True
 
-        # parmeters == common
+        # parmeters
+        # number of class
         self.num_class = 4
+        # learning rate
         self.lr = 0.0001
+        # loss fuction
         self.loss = 'sparse_categorical_crossentropy'
-        self.epochs = 200
+        # training epoch
+        self.epochs = 3
+        # batch size
         self.batch_size = 8
-        self.patience = 30
+        # if accuracy is not improved after specified patience, then it will stop training.
+        self.patience = 10
 
         # parameters == Transformer
         self.head_size=256
@@ -38,9 +44,12 @@ class Config:
         self.units_h4 = 4
 
         # parameters == ConvLSTM2D
+        # time step for each subsequence
         self.steps = 8
+        # the length of each subsequence
         self.length = 106
         self.verbose = 1
+        # the dimensionality of the output space (i.e. the number of output filters in the convolution).
         self.filters = 64
 
         # model checkpoint path
