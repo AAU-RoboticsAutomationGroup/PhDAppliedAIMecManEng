@@ -2,7 +2,7 @@
 ## 1. Description
 
 ### 1.1 Modeling Time Series Data with Deep Learning Neural Networks 
-The goal of this lab is to build deep neural networks that can classify the screwing process data based on time series, or sequential, data.
+The goal of this repo is to build deep neural networks that can classify the screwing process data based on time series, or sequential, data.
 
 A time series is a series of data points, ordered in time. For complex systems, each data point will likely be multivariate, meaning there are multiple variables for each data point. Examples of data sets with multivariate time series data are financial markets, air quality measurement, and health records. In each case, the goal is to predict one of the variable values, such as a stock price, pollutant level, or patient outcome, based on the sequential dependence of past data.
 
