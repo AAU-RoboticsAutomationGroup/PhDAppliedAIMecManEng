@@ -4,7 +4,6 @@ import json
 import argparse
 
 from keras import layers, utils, models
-
 from sklearn.metrics import f1_score, precision_score, recall_score, confusion_matrix
 from keras.callbacks import ModelCheckpoint
 from utils.configure import Config
