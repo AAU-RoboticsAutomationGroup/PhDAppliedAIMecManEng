@@ -78,8 +78,8 @@ It specifies the required package.
 ```
 python Conv1D_org_data.py --is_org_data_only_process=Yes --is_flt=Yes
 ```
-- is_org_data_only_process - only take the torque data
-- is_flt - the filtered dataset which remove several large size data samples
+- **is_org_data_only_process** - only take the torque data
+- **is_flt** - the filtered dataset which removes several large size data samples
 
 ## Assignment instructions
 Several lines are missing in *ConvLSTM2D_org_data.py*, *LSTM_org_data.py* and *TRM_org_data.py*.
