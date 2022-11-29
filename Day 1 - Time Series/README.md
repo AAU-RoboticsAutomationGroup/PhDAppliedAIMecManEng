@@ -96,10 +96,10 @@ python Conv1D_org_data.py --is_org_data_only_process=Yes --is_flt=Yes
 The model will be saved to the folder - checkpoints (You will need to create this folder manually). 
 
 ## 4. Assignment instructions
-Several lines are missing in *ConvLSTM2D_org_data.py*, *LSTM_org_data.py* and *TRM_org_data.py*.
+Several lines are missing in *ConvLSTM2D_org_data.py*. 
 
-You will need to use *Conv1D_org_data.py* as reference and fill the missing code in the above scripts. You may want to fine-tune
-the parameters of the *configure.py* file.
+You will need to use *Conv1D_org_data.py* as reference and fill the missing code in ConvLSTM2D_org_data.py. You may want to fine-tune
+the parameters to get the better results. ( *LSTM_org_data.py* and *TRM_org_data.py* are optional if you have time :) )
 
 ## 5. Getting help
 Ask on Teams or contact Chen Li at email cl@mp.aau.dk.

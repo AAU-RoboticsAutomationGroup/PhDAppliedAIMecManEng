@@ -14,7 +14,7 @@ def ConvLSTM2D(X_train, y_train, X_test, y_test, cfg, features, outputs, callbac
     features, outputs = features, outputs
     # =================================================================================================================
     # Question 1: the input shape of the Convlstm2D is [timesteps, rows, columns, features]
-    input_shape = (cfg.steps, 1, cfg.length, features)
+    input_shape = ?
     # =================================================================================================================
 
     # create model
@@ -32,9 +32,7 @@ def ConvLSTM2D(X_train, y_train, X_test, y_test, cfg, features, outputs, callbac
     # Training and evaluation
     # =================================================================================================================
     # Question 2: complete the following code for training and validation
-    history = model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=cfg.epochs,
-                        batch_size=cfg.batch_size, callbacks=[callbacks_list],
-                        verbose=cfg.verbose)
+    history = model.fit(?)
     # =================================================================================================================
 
     return model, history
@@ -66,8 +64,7 @@ if __name__ == "__main__":
 
     # ==================================================================================================================
     # Question 3: save the best model
-    checkpoint = ModelCheckpoint(model_path, monitor='val_acc', verbose=1, save_best_only=True,
-                                 mode='max')
+    checkpoint = ModelCheckpoint(?)
     callbacks_list = [checkpoint]
     # ==================================================================================================================
 

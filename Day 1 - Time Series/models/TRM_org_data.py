@@ -81,17 +81,20 @@ if __name__ == '__main__':
     input_shape = X_train.shape[1:]
 
     # initial a Transformer model
+    # =================================================================================================================
+    # Question 1: the input shape of the LSTM is [timesteps, rows, columns, features]
     model = TRM_scr(
         input_shape,
-        head_size=cfg.head_size,
-        num_heads=cfg.num_heads,
-        ff_dim=cfg.ff_dim,
-        num_transformer_blocks=cfg.num_transformer_blocks,
-        mlp_units=cfg.mlp_units,
-        mlp_dropout=cfg.mlp_dropout,
-        dropout=cfg.dropout,
-        n_classes=cfg.num_class
+        head_size=?,
+        num_heads=?,
+        ff_dim=?,
+        num_transformer_blocks=?,
+        mlp_units=?,
+        mlp_dropout=?,
+        dropout=?,
+        n_classes=?
     )
+    # =================================================================================================================
 
     # compile model
     opt = tf.optimizers.Adam(cfg.lr)

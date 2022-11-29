@@ -13,14 +13,21 @@ from utils.utils import *
 # build model
 def LSTM_src(X_train, y_train, X_test, y_test, cfg, features, outputs, callbacks_list):
     features, outputs = features, outputs
-    input_shape = (X_train.shape[1], features)
+    # =================================================================================================================
+    # Question 1: the input shape of the LSTM is [timesteps, rows, columns, features]
+    input_shape = ?
+    # =================================================================================================================
    
     # create model
     model = models.Sequential()
     model.add(layers.LSTM(400, input_shape=input_shape))
     model.add(layers.Dropout(cfg.dropout))
     model.add(layers.Dense(400, activation='relu'))
-    model.add(layers.Dense(outputs, activation='softmax'))
+    # =================================================================================================================
+    # Question 2: the out put of the model is ?
+    model.add(layers.Dense(?, activation='softmax'))
+    # =================================================================================================================
+
     
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['acc'])
 

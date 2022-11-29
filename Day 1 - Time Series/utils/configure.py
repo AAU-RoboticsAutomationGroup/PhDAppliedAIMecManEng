@@ -22,7 +22,7 @@ class Config:
         # loss fuction
         self.loss = 'sparse_categorical_crossentropy'
         # training epoch
-        self.epochs = 3
+        self.epochs = 1
         # batch size
         self.batch_size = 8
         # if accuracy is not improved after specified patience, then it will stop training.

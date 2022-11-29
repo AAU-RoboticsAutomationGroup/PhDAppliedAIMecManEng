@@ -1,1 +1,1 @@
-{"fltprocess_ConvLSTM2D_precision": 0.4253444967730682, "fltprocess_ConvLSTM2D_recall": 0.4926838810641627, "fltprocess_ConvLSTM2D_f1": 0.45608979728597754}
+{"fltprocess_ConvLSTM2D_precision": 0.4253444967730682, "fltprocess_ConvLSTM2D_recall": 0.4926838810641627, "fltprocess_ConvLSTM2D_f1": 0.45608979728597754}{"fltprocess_LSTM_precision": 0.1775, "fltprocess_LSTM_recall": 0.25, "fltprocess_LSTM_f1": 0.20760233918128654}
