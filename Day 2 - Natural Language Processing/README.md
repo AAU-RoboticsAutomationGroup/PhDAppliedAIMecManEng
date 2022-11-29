@@ -1,7 +1,7 @@
 # Natural Language Processing (NLP) Assignment
 ## 1. Description
 
-### 1.1 Instructing the Mobile Industrial Robot through the Speech 
+### 1.1 Instructing Mobile Industrial Robots through a Virtual Assistant 
 The goal of this repo is to a virtual assistant that can interact with the MiR robot on the shop floor.
 
 A industrial virtual assistant is an independent agent who provides services to users while interacting with various industrial robots running on the shop floor. A virtual assistant typically operates from a factory but can access the necessary services, such as control a mobile robot to do a delivery task.
