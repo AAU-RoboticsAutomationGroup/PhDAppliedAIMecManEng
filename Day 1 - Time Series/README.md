@@ -74,7 +74,7 @@ The F1, recall, and Precision will be recorded in a json file in this folder.
 #### 2.2.8 requirements.txt
 It specifies the required package.
 
-## Sequence of Reading Source Code
+#### 2.2.9 Sequence of Reading Source Code
 ```
 Data acquisition + Data Preparocess -> utils.py
 DL Model Traning -> Conv1D_org_data.py
