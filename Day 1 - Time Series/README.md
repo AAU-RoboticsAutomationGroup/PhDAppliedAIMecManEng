@@ -68,10 +68,10 @@ We provide four different deep learning models, *Conv1D*, *ConvLSTM2D*, *LSTM* a
 #### 2.2.6 scores folder
 The F1, recall, and Precision will be recorded in a json file in this folder.
 
-### 2.2.7 utils folder
+#### 2.2.7 utils folder
 *configure.py* and *utils.py* provide configuration information (e.g., data direction, paramaters of NN) and functions (e.g., data load), respectively. 
 
-### 2.2.8 requirements.txt
+#### 2.2.8 requirements.txt
 It specifies the required package.
 
 ## Assignment instructions
