@@ -74,10 +74,17 @@ The F1, recall, and Precision will be recorded in a json file in this folder.
 #### 2.2.8 requirements.txt
 It specifies the required package.
 
+## Training model (Conv1D)
+```
+python Conv1D_org_data.py --is_org_data_only_process=Yes --is_flt=Yes
+```
+- is_org_data_only_process - only take the torque data
+- is_flt - the filtered dataset which remove several large size data samples
+
 ## Assignment instructions
 Several lines are missing in *ConvLSTM2D_org_data.py*, *LSTM_org_data.py* and *TRM_org_data.py*.
 
-You will need to use *Conv1D_org_data.py* as reference and fill the missing code in the above scripts. You need to fine-tune
+You will need to use *Conv1D_org_data.py* as reference and fill the missing code in the above scripts. You may want to fine-tune
 the parameters of the *configure.py* file.
 
 ## Getting help
