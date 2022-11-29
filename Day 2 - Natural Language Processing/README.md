@@ -14,7 +14,7 @@ The live demo is arranged at AAU Smart Lab.
 
 ### 1.2 Task
 You will need to design a simple Virtual Assistant which is able to interact through speech recognition or text to control the LH for the chosen tasks.
-<img src="https://github.com/AAU-RoboticsAutomationGroup/PhDAppliedAIMecManEng/blob/main/Day%201%20-%20Time%20Series/images/ScrewingCell.png" width="1000"/>
+<img src="https://github.com/AAU-RoboticsAutomationGroup/PhDAppliedAIMecManEng/blob/main/Day%202%20-%20Natural%20Language%20Processing/images/VA.png" width="1000"/>
 
 
 ## 2. Getting Started
