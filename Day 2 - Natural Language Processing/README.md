@@ -52,7 +52,7 @@ It contains the static pictures for this repo.
 #### 2.2.2 Script for controlling LH
 *Mir.py* contains functions for controlling MiR. 
 
-#### 2.2.3 Script for Speech service
+#### 2.2.3 Script for speech service
 *speech_service.py* contains text to speech and speech to text functions. 
 
 #### 2.2.4 requirements.txt
