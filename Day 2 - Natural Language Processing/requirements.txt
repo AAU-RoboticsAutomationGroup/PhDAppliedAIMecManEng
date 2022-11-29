@@ -1,0 +1,6 @@
+requests
+wit
+simplejson
+geopy
+SpeechRecognition
+gTTS
