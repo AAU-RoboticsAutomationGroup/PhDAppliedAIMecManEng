@@ -1,6 +1,5 @@
 # Time Series Analysis Assignment
 ## 1. Description
-<hr>
 
 ### 1.1 Modeling Time Series Data with Deep Learning Neural Networks 
 The goal of this lab is to build deep neural networks that can classify the screwing process data based on time series, or sequential, data.
@@ -17,10 +16,9 @@ This project and the Screwing process data are provided by AAU Smart Lab.
 You’ll use time-series classification to classify screwing process on screwing data collected from AAU screw cell. Specifically, you'll build a deep learning model that more accurately classify 2000+ data samples. In total, there are four categories.
 <img src="https://github.com/AAU-RoboticsAutomationGroup/PhDAppliedAIMecManEng/blob/main/Day%201%20-%20Time%20Series/images/ScrewingCell.png" width="400"/>
 
-## 1. Getting started
-<hr>
+## 2. Getting started
 
-### 1.1 Set up Environment 
+### 2.1 Set up Environment 
 
 ## Assignment instructions
 What task(s) should the student do e.g. implement certain lines of code?
