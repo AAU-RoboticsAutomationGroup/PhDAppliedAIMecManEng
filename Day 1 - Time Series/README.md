@@ -14,7 +14,7 @@ This project and the Screwing process data are provided by AAU Smart Lab.
 
 ### 1.2 Task
 You’ll use time-series classification to classify screwing process on screwing data collected from AAU screw cell. Specifically, you'll build a deep learning model that more accurately classify 2000+ data samples. In total, there are four categories.
-<img src="https://github.com/AAU-RoboticsAutomationGroup/PhDAppliedAIMecManEng/blob/main/Day%201%20-%20Time%20Series/images/ScrewingCell.png" width="400"/>
+<img src="https://github.com/AAU-RoboticsAutomationGroup/PhDAppliedAIMecManEng/blob/main/Day%201%20-%20Time%20Series/images/ScrewingCell.png" width="800"/>
 
 ## 2. Getting Started
 This section shows you how to set up your local programming environment.
