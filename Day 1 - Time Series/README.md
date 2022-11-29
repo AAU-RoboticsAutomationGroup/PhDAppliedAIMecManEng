@@ -54,7 +54,7 @@ pip install -r requirements.txt
 
 #### 2.2.2 Data folder
 You will need to manually create a folder with the name "Data". You will need to download the 
-[dataset](https://drive.google.com/file/d/1uBQVp9b_pjIhU7E6EhaDXizVb1PbMgOG/view?usp=share_link) and put it under this folder. 
+[dataset](https://drive.google.com/file/d/1uBQVp9b_pjIhU7E6EhaDXizVb1PbMgOG/view?usp=share_link) and put it under this folder.
 
 #### 2.2.3 images folder
 It contains the static pictures for this repo. 
@@ -71,10 +71,13 @@ The F1, recall, and Precision will be recorded in a json file in this folder.
 #### 2.2.7 utils folder
 *configure.py* and *utils.py* provide configuration information (e.g., dataset path, paramaters of NN) and functions (e.g., data load), respectively. 
 
-#### 2.2.8 requirements.txt
+#### 2.2.8 checkpoints
+You will need to manually create a folder with the name "checkpoints". After the training process completed, the model will be saved to this folder. 
+
+#### 2.2.9 requirements.txt
 It specifies the required package.
 
-#### 2.2.9 Sequence of Reading Source Code
+#### 2.2.10 Sequence of Reading Source Code
 ```
 Data acquisition + Data Preparocess -> utils.py
 DL Model Traning -> Conv1D_org_data.py
@@ -82,12 +85,15 @@ Configuration file -> configure.py
 ```
 We provide detailed comments in each script to help you understand the code.
 
-## 3. Training model (Conv1D)
+## 3. Training and Evaluation
+Training Conv1D for classifying screwing process.
 ```
 python Conv1D_org_data.py --is_org_data_only_process=Yes --is_flt=Yes
 ```
 - **is_org_data_only_process** - only take the torque data
 - **is_flt** - the filtered dataset which removes several large size data samples
+
+The model will be saved to the folder - checkpoints (You will need to create this folder manually). 
 
 ## 4. Assignment instructions
 Several lines are missing in *ConvLSTM2D_org_data.py*, *LSTM_org_data.py* and *TRM_org_data.py*.
