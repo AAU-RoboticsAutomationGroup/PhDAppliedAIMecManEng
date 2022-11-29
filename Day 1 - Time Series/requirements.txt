@@ -1,0 +1,7 @@
+tensorflow
+keras
+simplejson
+scikit-learn
+matplotlib
+numpy
+pandas
