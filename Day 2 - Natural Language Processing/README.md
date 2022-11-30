@@ -67,7 +67,7 @@ This section shows you how to set up your local programming environment.
 In order to connect to our LH, you will need to connect to our AAU 5G network first. The password will be given on the lecture day.
 
 #### 2.3.2 Log in LH
-Access the [mir](mir.com) with the Username: Distributor, The password will be given on the lecture day.
+To control the LH, you need to access the [mir](mir.com) with the Username: Distributor, The password will be given on the lecture day.
 
 ## 3. Building Online Dataset and Training your Model
 We will provide a live demo during the lecture to show you how to use [wit.ai](https://wit.ai/) service to build your own dialogue corpus and training the model.
