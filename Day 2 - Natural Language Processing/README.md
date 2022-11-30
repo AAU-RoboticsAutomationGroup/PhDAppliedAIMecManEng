@@ -60,6 +60,15 @@ It specifies the required package.
 
 We provide detailed comments in each script to help you understand the code.
 
+## 2.3. Connect to LH
+This section shows you how to set up your local programming environment.
+
+#### 2.3.1 Connect AAU 5G network
+In order to connect to our LH, you will need to connect to our AAU 5G network first. The password will be given on the lecture day.
+
+#### 2.3.2 Log in LH
+Access the [mir](mir.com) with the Username: Distributor, The password will be given on the lecture day.
+
 ## 3. Building Online Dataset and Training your Model
 We will provide a live demo during the lecture to show you how to use [wit.ai](https://wit.ai/) service to build your own dialogue corpus and training the model.
 

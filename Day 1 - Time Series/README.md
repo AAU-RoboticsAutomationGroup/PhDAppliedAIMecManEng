@@ -22,7 +22,7 @@ This section shows you how to set up your local programming environment.
 
 #### 2.1.1 Install Python 3
 
-Require python 3.9 above. Please refer to [here](https://www.python.org/downloads/) for download and installation. 
+Require python 3.9 or above. Please refer to [here](https://www.python.org/downloads/) for download and installation. 
 
 #### 2.1.2 Install IDE (optional)
 
