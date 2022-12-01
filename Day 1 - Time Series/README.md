@@ -96,6 +96,10 @@ python Conv1D_org_data.py --is_org_data_only_process=Yes --is_flt=Yes
 The model will be saved to the folder - checkpoints (You will need to create this folder manually). 
 
 ## 4. Assignment instructions
+### 4.1 Download Dataset
+We prepared dataset for the exercise. You can download it from [here](https://drive.google.com/file/d/1uBQVp9b_pjIhU7E6EhaDXizVb1PbMgOG/view?usp=share_link)
+
+### 4.2 Filling missing part in the scripts
 Several lines are missing in *ConvLSTM2D_org_data.py*. 
 
 You will need to use *Conv1D_org_data.py* as reference and fill the missing code in ConvLSTM2D_org_data.py. You may want to fine-tune
