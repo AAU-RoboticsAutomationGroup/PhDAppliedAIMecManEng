@@ -61,7 +61,8 @@ It specifies the required package.
 We provide detailed comments in each script to help you understand the code.
 
 ## 2.3. Connect to LH
-This section shows you how to set up your local programming environment.
+The following instruction shows how to connect to our LH. We will also show you how to control the LH
+through your phone or laptop.
 
 #### 2.3.1 Connect AAU 5G network
 In order to connect to our LH, you will need to connect to our AAU 5G network first. The password will be given on the lecture day.
