@@ -93,17 +93,22 @@ python Conv1D_org_data.py --is_org_data_only_process=Yes --is_flt=Yes
 - **is_org_data_only_process** - only take the torque data
 - **is_flt** - the filtered dataset which removes several large size data samples
 
-The model will be saved to the folder - checkpoints (You will need to create this folder manually). 
+The model will be saved to the folder - checkpoints (You will need to create this folder manually).
 
-## 4. Assignment instructions
-### 4.1 Download Dataset
+## 4. Data Visualization
+We provide some running examples of data visualization on Google Colab. Here is the [link](https://colab.research.google.com/drive/12FldGVrJZgz-MNM5KYyq4CkH4_9qXzcE?usp=sharing).
+
+You will need to download the [dataset](https://www.kaggle.com/datasets/bappekim/air-pollution-in-seoul?resource=download) from Kaggle and upload it to your Google colab. 
+
+## 5. Assignment instructions
+### 5.1 Download Dataset
 We prepared dataset for the exercise. You can download it from [here](https://drive.google.com/file/d/1uBQVp9b_pjIhU7E6EhaDXizVb1PbMgOG/view?usp=share_link)
 
-### 4.2 Filling missing part in the scripts
+### 5.2 Filling missing part in the scripts
 Several lines are missing in *ConvLSTM2D_org_data.py*. 
 
 You will need to use *Conv1D_org_data.py* as reference and fill the missing code in ConvLSTM2D_org_data.py. You may want to fine-tune
 the parameters to get the better results. ( *LSTM_org_data.py* and *TRM_org_data.py* are optional if you have time :) )
 
-## 5. Getting help
+## 6. Getting help
 Ask on Teams or contact Chen Li at email cl@mp.aau.dk.
