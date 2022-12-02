@@ -24,7 +24,7 @@ def LSTM_src(X_train, y_train, X_test, y_test, cfg, features, outputs, callbacks
     model.add(layers.Dropout(cfg.dropout))
     model.add(layers.Dense(400, activation='relu'))
     # =================================================================================================================
-    # Question 2: the out put of the model is ?
+    # Question 2: the output of the model is ?
     model.add(layers.Dense(?, activation='softmax'))
     # =================================================================================================================
 
@@ -54,9 +54,9 @@ if __name__ == "__main__":
 
     # split data source
     if (args.is_org_data_only_process == 'Yes') and (args.is_flt == 'No'):
-        X_train, X_test, y_train, y_test = load_org_data_process_task(cfg.org_aursad_cln_path, expand_flag=True)
+        X_train, X_test, y_train, y_test = load_org_data_only_process(cfg.org_aursad_cln_path, expand_flag=True)
     elif (args.is_org_data_only_process == 'Yes') and (args.is_flt == 'Yes'):
-        X_train, X_test, y_train, y_test = load_org_data_process_task(cfg.org_aursad_flt_path, expand_flag=True)
+        X_train, X_test, y_train, y_test = load_org_data_only_process(cfg.org_aursad_flt_path, expand_flag=True)
     # else:
     #     X_train, X_test, y_train, y_test = load_org_data_process_and_task(cfg.org_aursad_path, expand_flag=True)
     # set up parameters
