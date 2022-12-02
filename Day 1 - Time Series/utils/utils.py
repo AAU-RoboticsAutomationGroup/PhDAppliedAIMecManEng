@@ -41,11 +41,6 @@ def load_org_data_only_process(dataset, expand_flag):
        values = item.values
        X.append(values)
    X = pd.DataFrame(X).fillna(0)
-
-   # for item in temp_y:
-   #     print(type(item))
-   #     values = item[0]
-   #     y.append(values)
    y = pd.DataFrame(temp_y)
 
    # Next, split dataset to training and validation datasets, we use 20% as test dataset
@@ -95,62 +90,3 @@ def restructure_data(feature_data):
    feature = pd.DataFrame(feature).fillna(0)
 
    return feature
-
-# ======================================================================================================================
-# multivariate - Torque + task data (19 features)
-# Only if you have more time :)
-# ======================================================================================================================
-def load_org_data_process_task(dataset, expand_flag):
-   # read the raw data file
-   with open(dataset, "rb") as raw_file:
-       raw_data = pickle.load(raw_file)
-
-   # obtain torque and lable
-   temp = pd.DataFrame([[item['torque'],
-                         item['tcp_pose_0'], item['tcp_pose_1'], item['tcp_pose_2'], item['tcp_pose_3'], item['tcp_pose_4'], item['tcp_pose_5'],
-                         item['tcp_speed_0'], item['tcp_speed_1'], item['tcp_speed_2'], item['tcp_speed_3'], item['tcp_speed_4'], item['tcp_speed_5'],
-                         item['tcp_force_0'], item['tcp_force_1'], item['tcp_force_2'], item['tcp_force_3'], item['tcp_force_4'], item['tcp_force_5'],
-                         item['label']] for item in raw_data], columns=["torque", "tcp_pose_0", "tcp_pose_1", "tcp_pose_2", "tcp_pose_3", "tcp_pose_4", "tcp_pose_5",
-                                                                        "tcp_speed_0", "tcp_speed_1", "tcp_speed_2", "tcp_speed_3", "tcp_speed_4", "tcp_speed_5",
-                                                                        "tcp_force_0", "tcp_force_1", "tcp_force_2", "tcp_force_3", "tcp_force_4", "tcp_force_5", "label"])
-
-
-   X, y = [], []
-   X.append(restructure_data(temp['torque']))
-   X.append(restructure_data(temp['tcp_pose_0']))
-   X.append(restructure_data(temp['tcp_pose_1']))
-   X.append(restructure_data(temp['tcp_pose_2']))
-   X.append(restructure_data(temp['tcp_pose_3']))
-   X.append(restructure_data(temp['tcp_pose_4']))
-   X.append(restructure_data(temp['tcp_pose_5']))
-   X.append(restructure_data(temp['tcp_speed_0']))
-   X.append(restructure_data(temp['tcp_speed_1']))
-   X.append(restructure_data(temp['tcp_speed_2']))
-   X.append(restructure_data(temp['tcp_speed_3']))
-   X.append(restructure_data(temp['tcp_speed_4']))
-   X.append(restructure_data(temp['tcp_speed_5']))
-   X.append(restructure_data(temp['tcp_force_0']))
-   X.append(restructure_data(temp['tcp_force_1']))
-   X.append(restructure_data(temp['tcp_force_2']))
-   X.append(restructure_data(temp['tcp_force_3']))
-   X.append(restructure_data(temp['tcp_force_4']))
-   X.append(restructure_data(temp['tcp_force_5']))
-
-   X = np.dstack(X)
-
-   print(X.shape)
-
-   for item in temp['label']:
-       values = item[0]
-       y.append(values)
-   y = pd.DataFrame(y)
-
-   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 101)
-
-   print(y_train.value_counts())
-   print(y_test.value_counts())
-
-   print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
-
-   return X_train, X_test, y_train, y_test
-
