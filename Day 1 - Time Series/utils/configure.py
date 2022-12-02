@@ -7,7 +7,7 @@ class Config:
 
         # dataset path
         self.data_folder_path = os.path.join(self.project_path, '../Data')
-        self.org_aursad_flt_path = os.path.join(self.data_folder_path, 'aursad_flt.dat')
+        self.org_aursad_flt_path = os.path.join(self.data_folder_path, 'AURSAD_course.dat')
 
         # raw aursad D
         self.raw_data_source = True
@@ -22,7 +22,7 @@ class Config:
         # loss fuction
         self.loss = 'sparse_categorical_crossentropy'
         # training epoch
-        self.epochs = 30
+        self.epochs = 10
         # batch size
         self.batch_size = 8
         # if accuracy is not improved after specified patience, then it will stop training.

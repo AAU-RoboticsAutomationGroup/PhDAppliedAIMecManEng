@@ -42,10 +42,11 @@ def load_org_data_only_process(dataset, expand_flag):
        X.append(values)
    X = pd.DataFrame(X).fillna(0)
 
-   for item in temp_y:
-       values = item[0]
-       y.append(values)
-   y = pd.DataFrame(y)
+   # for item in temp_y:
+   #     print(type(item))
+   #     values = item[0]
+   #     y.append(values)
+   y = pd.DataFrame(temp_y)
 
    # Next, split dataset to training and validation datasets, we use 20% as test dataset
    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 101)
