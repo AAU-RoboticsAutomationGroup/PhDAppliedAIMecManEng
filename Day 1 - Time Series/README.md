@@ -111,4 +111,4 @@ You will need to use *Conv1D_org_data.py* as reference and fill the missing code
 the parameters to get the better results. ( *LSTM_org_data.py* and *TRM_org_data.py* are optional if you have time :) )
 
 ## 6. Getting help
-Ask on Teams or contact Chen Li at email cl@mp.aau.dk.
+Contact Chen Li at email cl@mp.aau.dk.

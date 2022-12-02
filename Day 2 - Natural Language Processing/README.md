@@ -85,4 +85,4 @@ There are four tasks in total.
 You are required to complete Task 4 and any other two tasks.
 
 ## 5. Getting help
-Ask on Teams or contact Chen Li at email cl@mp.aau.dk.
+Contact Chen Li at email cl@mp.aau.dk.
