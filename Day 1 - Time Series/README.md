@@ -102,7 +102,7 @@ You will need to download the [dataset](https://www.kaggle.com/datasets/bappekim
 
 ## 5. Assignment instructions
 ### 5.1 Download Dataset
-We prepared dataset for the exercise. You can download it from [here](https://drive.google.com/file/d/1uBQVp9b_pjIhU7E6EhaDXizVb1PbMgOG/view?usp=share_link)
+We prepared dataset for the exercise. You can download it from [here]()
 
 ### 5.2 Filling missing part in the scripts
 Several lines are missing in *ConvLSTM2D_org_data.py*. 
