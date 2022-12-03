@@ -26,7 +26,7 @@ What task(s) should the student do e.g. implement certain lines of code?
 ## 6. Expected results
 The training should yield a similar result as below.
 
-![highway-v0 training example](docs/highway-v0_training.png)
+https://user-images.githubusercontent.com/10414639/205459399-4d8afdf3-608d-44b3-b6e9-d1397478f286.mp4
 
 ## 7. Getting help
 Ask on Moodle or contact Simon Bøgh at sb@mp.aau.dk or Nestor Arana Arexolaleiba at narana@mondragon.edu.
