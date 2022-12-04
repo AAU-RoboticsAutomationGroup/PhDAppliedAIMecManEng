@@ -22,6 +22,12 @@ The purpose of training such an agent, is to have it learn how to take the prope
 ### 1.2 Task
 You’ll use `skrl` to set up and train a `Deep Deterministic Policy Gradient (DDPG)` agent to balance a pole in the `cartpole` environment. Specifically, you'll build a deep learning model that maps observations from the environment to relevant actions that the agent must take to maximize its rewards over time.
 
+**skrl - Reinforcement Learning framework**
+
+* https://skrl.readthedocs.io/en/latest/
+
+<img src="https://user-images.githubusercontent.com/10414639/205515255-39b6c39a-18b3-4b30-97bb-2947cd52fa34.png" data-canonical-src="https://user-images.githubusercontent.com/10414639/205515255-39b6c39a-18b3-4b30-97bb-2947cd52fa34.png" width="250" />
+
 #### 1.2.1 Action Space
 | Num | Action
 |---|---|
