@@ -3,11 +3,21 @@
 ### 1.1 Training your first Reinforcement Learning agent
 The goal of this repo is to build deep neural networks that we will train to act as our policy (strategy) for a Reinforcement Learning agent. The neural network will map observations to actions.
 
+<img src="https://user-images.githubusercontent.com/10414639/205514351-04ee86d5-38aa-450c-a641-436a5eef7a13.gif" data-canonical-src="https://user-images.githubusercontent.com/10414639/205514351-04ee86d5-38aa-450c-a641-436a5eef7a13.gif" width="250" />
+
 A reinforcement learning agent can use a table, function or neural network to map observations to actions. Depending on the observations different neural network architectures can be used e.g. CNNs for image data.
 
 In this repo, you'll implement a reinforcement learning agent with the python library [skrl](https://skrl.readthedocs.io/en/latest/). You will set up the neural network for our policy. The environment you will be working on is the classic `cartpole` environment in `Gym` from [gymlibrary.dev](https://www.gymlibrary.dev) (formerly OpenAI Gym).
 
 The purpose of training such an agent, is to have it learn how to take the proper actions to balance the pole on the cart. Similar techniques can be used to control other processess for example in industrial machines and processes.
+
+|-|-|
+| --- | --- |
+| Action Space | Discrete(2) |
+| Observation Shape | (4,) |
+| Observation High | [4.8 inf 0.42 inf] |
+| Observation Low | [-4.8 -inf -0.42 -inf] |
+| Import | `gym.make("CartPole-v1")` |
 
 ### 1.2 Task
 You’ll use `skrl` to set up and train a `Deep Deterministic Policy Gradient (DDPG)` agent to balance a pole in the `cartpole` environment. Specifically, you'll build a deep learning model that maps observations from the environment to relevant actions that the agent must take to maximize its rewards over time.
