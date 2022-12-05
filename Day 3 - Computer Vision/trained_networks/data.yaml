@@ -1,0 +1,19 @@
+names:
+- Background
+- BlackCover
+- BlueCover
+- BottomCover
+- Box
+- PCB
+- Table
+- WhiteCover
+nc: 8
+roboflow:
+  license: CC BY 4.0
+  project: cv-lecture-test
+  url: https://universe.roboflow.com/project/cv-lecture-test/dataset/2
+  version: 2
+  workspace: project
+test: ../test/images
+train: CV-lecture-test-2/train/images
+val: CV-lecture-test-2/valid/images

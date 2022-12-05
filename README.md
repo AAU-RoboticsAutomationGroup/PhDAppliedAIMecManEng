@@ -8,4 +8,10 @@ Artificial Intelligence/Machine Learning is becoming an increasingly important t
 
 This course gives an introduction to emerging tools in AI/ML such as broad range of deep learning techniques that are highly relevant for the modern mechanical / manufacturing engineer. In the course valuable methods and specific industrial applications are addressed.
 
+## Course instructors
 
+* Simon Bøgh, sb@mp.aau.dk
+* Chen Li, cl@mp.aau.dk
+* Dimitris Chrysostomou, dimi@mp.aau.dk
+* Rui Miguel Horta Pimentel de Figueiredo, rmhpdf@mp.aau.dk
+* Nestor Arana Arexolaleiba, narana@mondragon.edu
