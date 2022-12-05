@@ -69,10 +69,7 @@ if __name__ == '__main__':
         X_train, X_test, y_train, y_test = load_org_data_only_process(cfg.org_aursad_cln_path, expand_flag=True)
     elif (args.is_org_data_only_process == 'Yes') and (args.is_flt == 'Yes'):
         X_train, X_test, y_train, y_test = load_org_data_only_process(cfg.org_aursad_flt_path, expand_flag=True)
-    elif (args.is_org_data_only_process == 'No') and (args.is_flt == 'No'):
-        X_train, X_test, y_train, y_test = load_org_data_process_task(cfg.org_aursad_cln_path, expand_flag=True)
-    elif (args.is_org_data_only_process == 'No') and (args.is_flt == 'Yes'):
-        X_train, X_test, y_train, y_test = load_org_data_process_task(cfg.org_aursad_flt_path, expand_flag=True)
+
     
     # set up parameters
     model_path, loss_img, acc_img, precision, recall, f1 = cfg.model_parameters_set_process_task("TRM_org_data", args.is_org_data_only_process, args.is_flt)
