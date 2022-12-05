@@ -67,5 +67,6 @@ class MiR():
 mir = MiR()
 print(mir.get_system_info())
 
+# testing
 mission_id = mir.get_mission_guid("warehousephd")
 mir.post_to_mission_queue(mission_id)
