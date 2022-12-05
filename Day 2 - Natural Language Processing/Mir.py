@@ -1,7 +1,7 @@
 import requests, json
-from geopy.distance import geodesic
-import math
-import time
+# from geopy.distance import geodesic
+# import math
+# import time
 
 class MiR():
 
@@ -62,3 +62,10 @@ class MiR():
                 break
 
         return mission['guid']
+
+
+mir = MiR()
+print(mir.get_system_info())
+
+mission_id = mir.get_mission_guid("warehousephd")
+mir.post_to_mission_queue(mission_id)
