@@ -41,13 +41,13 @@ Please refer to [here](https://www.anaconda.com/#) for download and installation
 Please use the below commands to clone the repo and install required package.
 
 **A.** You can download the repository, or clone the repository using the following code.
-```
+```sh
 git clone https://github.com/AAU-RoboticsAutomationGroup/PhDAppliedAIMecManEng.git
 ```
 **B.** 
 Please use the below commands to install required package. The *requirements.txt* is under the Day 1 
 Time Series folder.
-```
+```sh
 pip install -r requirements.txt
 ```
 ### 2.2 Structure of this repository
@@ -68,7 +68,7 @@ We provide four different deep learning models, *Conv1D*, *ConvLSTM2D*, *LSTM* a
 The F1, recall, and Precision will be recorded in a json file in this folder.
 
 #### 2.2.7 utils folder
-*configure.py* and *utils.py* provide configuration information (e.g., dataset path, paramaters of NN) and functions (e.g., data load), respectively. 
+`configure.py` and `utils.py` provide configuration information (e.g., dataset path, paramaters of NN) and functions (e.g., data load), respectively. 
 
 #### 2.2.8 checkpoints
 You will need to manually create a folder with the name "checkpoints". After the training process completed, the model will be saved to this folder. 
@@ -86,7 +86,7 @@ We provide detailed comments in each script to help you understand the code.
 
 ## 3. Training and Evaluation
 Training Conv1D for classifying screwing process.
-```
+```sh
 python Conv1D_org_data.py --is_org_data_only_process=Yes --is_flt=Yes
 ```
 - **is_org_data_only_process** - only take the torque data
@@ -101,15 +101,15 @@ You will need to download the [dataset](https://www.kaggle.com/datasets/bappekim
 
 ## 5. Assignment instructions
 ### 5.1 Download Dataset
-We prepared dataset for the exercise. You can download it from [here](https://drive.google.com/file/d/1eEsSmOmAoyWYQgmJyfhtCPjT6lauQGNv/view?usp=sharing)
+We prepared a dataset for the exercise. You can download it from [here](https://drive.google.com/file/d/1eEsSmOmAoyWYQgmJyfhtCPjT6lauQGNv/view?usp=sharing)
 
-The more information of the dataset can be found from [here](https://zenodo.org/record/4487073#.Y4nqB3bMJmM).
+More information about the dataset can be found [here](https://zenodo.org/record/4487073#.Y4nqB3bMJmM).
 
 ### 5.2 Filling missing part in the scripts
-Several lines are missing in *ConvLSTM2D_org_data.py*. 
+Several lines are missing in `./models/ConvLSTM2D_org_data.py`. 
 
-You will need to use *Conv1D_org_data.py* as reference and fill the missing code in ConvLSTM2D_org_data.py. You may want to fine-tune
-the parameters to get the better results. ( *LSTM_org_data.py* and *TRM_org_data.py* are optional if you have time :) )
+You will need to use `Conv1D_org_data.py` as reference and fill the missing code in `ConvLSTM2D_org_data.py`. You may want to fine-tune
+the parameters to get better results. ( `LSTM_org_data.py` and `TRM_org_data.py` are optional if you have time :) )
 
 ## 6. Getting help
 Contact Chen Li at email cl@mp.aau.dk.
