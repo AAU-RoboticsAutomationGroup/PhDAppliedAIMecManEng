@@ -53,8 +53,7 @@ pip install -r requirements.txt
 ### 2.2 Structure of this repository
 
 #### 2.2.2 Data folder
-You will need to manually create a folder with the name "Data". You will need to download the 
-[dataset](https://drive.google.com/file/d/1uBQVp9b_pjIhU7E6EhaDXizVb1PbMgOG/view?usp=share_link) and put it under this folder.
+You will need to manually create a folder with the name "Data". You will need to download from [here](https://drive.google.com/file/d/1eEsSmOmAoyWYQgmJyfhtCPjT6lauQGNv/view?usp=share_link) and put it under this folder.
 
 #### 2.2.3 images folder
 It contains the static pictures for this repo. 
