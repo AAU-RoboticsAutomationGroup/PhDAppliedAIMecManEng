@@ -45,7 +45,7 @@ Please use the below commands to clone the repo and install required package.
 git clone https://github.com/AAU-RoboticsAutomationGroup/PhDAppliedAIMecManEng.git
 ```
 **B.** 
-Please use the below commands to install required package. The *requirements.txt* is under the Day 1 - 
+Please use the below commands to install required package. The *requirements.txt* is under the Day 1 
 Time Series folder.
 ```
 pip install -r requirements.txt
