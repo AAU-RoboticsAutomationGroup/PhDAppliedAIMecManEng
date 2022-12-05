@@ -1,5 +1,6 @@
 from wit import Wit
 
+# set up your access key here
 client = Wit("KBYOLXIIU23MUV3ADAML27HRLYMQZK63")
 
 response = client.message('I need you deliver this computer to the lab')
