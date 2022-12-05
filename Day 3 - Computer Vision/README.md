@@ -17,9 +17,9 @@ Second task:
 ## Assignment instructions
 First task:
 
--Upload the file "Roboflow_Train_YOLOv5_Mobile_phones_colab.ipynb" to the google drive and follow the training and testing instructions.
+-Upload the file "Train_YOLOv5_Mobile_phones_colab.ipynb" to the google drive and follow the training and testing instructions.
 
--Challenge I: adapt the "Roboflow_Train_YOLOv5_Mobile_phones_local.ipynb" file to work in your local OS environment (e.g. linux, windows, mac)
+-Challenge: adapt the "Train_YOLOv5_Mobile_phones_local.ipynb" file to work in your local OS environment (e.g. linux, windows, mac)
 
 Second task:
 
@@ -27,7 +27,7 @@ Second task:
 
 -Clone YOLOv5 tensorflow repository: https://github.com/ultralytics/yolov5​ 
 
--Use trained weights (.pt and .yaml) for AAU’s dataset, from github​ (see trained_networks_folder) or export trained tensorflow model from google colab
+-Use the trained weights (.pt and .yaml) for AAU’s dataset, from github​ (see trained_networks_folder) or export trained tensorflow model from google colab
 
 ## Getting help
 Ask on Teams or contact Rui or Dimitrios at email {rmhpdf,dimi}@mp.aau.dk
