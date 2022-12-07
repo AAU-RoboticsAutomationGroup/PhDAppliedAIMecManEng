@@ -20,7 +20,7 @@ The purpose of training such an agent, is to have it learn how to take the prope
 | Import | `gym.make("CartPole-v1")` |
 
 ### 1.2 Task
-You’ll use `skrl` to set up and train a `Deep Deterministic Policy Gradient (DDPG)` agent to balance a pole in the `cartpole` environment. Specifically, you'll build a deep learning model that maps observations from the environment to relevant actions that the agent must take to maximize its rewards over time.
+You’ll use `skrl` to set up and train a `Deep Q-Network (DQN)` agent to balance a pole in the `cartpole` environment. Specifically, you'll build a deep learning model that maps observations from the environment to relevant actions that the agent must take to maximize its rewards over time.
 
 **skrl - Reinforcement Learning framework**
 
@@ -47,7 +47,7 @@ You’ll use `skrl` to set up and train a `Deep Deterministic Policy Gradient (D
 The assignment will be set up in Google Colab.
 
 ## 3. Training and Evaluation
-Train a DDPG agent with various hyperparameters. Try with different neural network architectures, change the number of hidden layers and hidden units, try different learning rates, batch sizes etc. Read more here about DDPG and hyperparameters https://skrl.readthedocs.io/en/latest/modules/skrl.agents.ddpg.html
+Train a DQN agent with various hyperparameters. Try with different neural network architectures, change the number of hidden layers and hidden units, try different learning rates, batch sizes etc. Read more here about DQN and hyperparameters https://skrl.readthedocs.io/en/latest/modules/skrl.agents.dqn.html
 
 ## 4. Data Visualization
 The training can be followed in Tensorboard where the reward from each timestep/episode is plotted and can easily be compared to previous training runs.
