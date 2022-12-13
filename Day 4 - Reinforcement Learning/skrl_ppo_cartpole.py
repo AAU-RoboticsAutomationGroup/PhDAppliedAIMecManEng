@@ -4,7 +4,8 @@ import torch
 import torch.nn as nn
 
 # Import the skrl components to build the RL system
-from skrl.models.torch import Model, GaussianMixin, DeterministicMixin
+import skrl
+from skrl.models.torch import Model, CategoricalMixin, DeterministicMixin
 from skrl.memories.torch import RandomMemory
 from skrl.agents.torch.ppo import PPO, PPO_DEFAULT_CONFIG
 from skrl.trainers.torch import SequentialTrainer
@@ -12,50 +13,55 @@ from skrl.resources.preprocessors.torch import RunningStandardScaler
 from skrl.resources.schedulers.torch import KLAdaptiveRL
 from skrl.envs.torch import wrap_env
 
+"""
+Requires skrl >= 0.9.0
+
+"""
+print(skrl.__version__)
+assert(skrl.__version__ >= '0.9.0')
 
 # Define the models (stochastic and deterministic models) for the agent using mixins.
 # - Policy: takes as input the environment's observation/state and returns an action
 # - Value: takes the state as input and provides a value to guide the policy
-class Policy(GaussianMixin, Model):
-    def __init__(self, observation_space, action_space, device, clip_actions=False,
-                 clip_log_std=True, min_log_std=-20, max_log_std=2, reduction="sum"):
+class Policy(CategoricalMixin, Model):
+    def __init__(self, observation_space, action_space, device, unnormalized_log_prob=True):
         Model.__init__(self, observation_space, action_space, device)
-        GaussianMixin.__init__(self, clip_actions, clip_log_std, min_log_std, max_log_std, reduction)
+        CategoricalMixin.__init__(self, unnormalized_log_prob)
 
-        self.net = nn.Sequential(nn.Linear(self.num_observations, 64),
-                                 nn.ReLU(),
-                                 nn.Linear(64, 64),
-                                 nn.ReLU(),
-                                 nn.Linear(64, self.num_actions))
-        self.log_std_parameter = nn.Parameter(torch.zeros(self.num_actions))
+        self.net = nn.Sequential(nn.Linear(self.num_observations, 256),
+                                nn.ReLU(),
+                                nn.Linear(256, 256),
+                                nn.ReLU(),
+                                nn.Linear(256, self.num_actions))
 
-    def compute(self, states, taken_actions, role):
-        # Pendulum-v1 action_space is -2 to 2
-        return 2 * torch.tanh(self.net(states)), self.log_std_parameter
+    def compute(self, inputs, role):
+        return self.net(inputs["states"]), {}
+
 
 class Value(DeterministicMixin, Model):
     def __init__(self, observation_space, action_space, device, clip_actions=False):
         Model.__init__(self, observation_space, action_space, device)
         DeterministicMixin.__init__(self, clip_actions)
 
-        self.net = nn.Sequential(nn.Linear(self.num_observations, 64),
+        self.net = nn.Sequential(nn.Linear(self.num_observations, 256),
                                  nn.ReLU(),
-                                 nn.Linear(64, 64),
+                                 nn.Linear(256, 256),
                                  nn.ReLU(),
-                                 nn.Linear(64, 1))
+                                 nn.Linear(256, 1))
 
-    def compute(self, states, taken_actions, role):
-        return self.net(states)
+    def compute(self, inputs, role):
+        return self.net(inputs["states"]), {}
 
 
 # Load and wrap the Gym environment.
 # Note: the environment version may change depending on the gym version
+num_envs = 4
 try:
-    env = gym.vector.make("Pendulum-v1", num_envs=4, asynchronous=False)
+    env = gym.vector.make("CartPole-v1", num_envs=num_envs, asynchronous=False)
 except gym.error.DeprecatedEnv as e:
-    env_id = [spec.id for spec in gym.envs.registry.all() if spec.id.startswith("Pendulum-v")][0]
-    print("Pendulum-v1 not found. Trying {}".format(env_id))
-    env = gym.vector.make(env_id, num_envs=4, asynchronous=False)
+    env_id = [spec.id for spec in gym.envs.registry.all() if spec.id.startswith("CartPole-v")][0]
+    print("CartPole-v1 not found. Trying {}".format(env_id))
+    env = gym.vector.make(env_id, num_envs=num_envs, asynchronous=False)
 env = wrap_env(env)
 
 device = env.device
@@ -69,7 +75,7 @@ memory = RandomMemory(memory_size=1024, num_envs=env.num_envs, device=device)
 # PPO requires 2 models, visit its documentation for more details
 # https://skrl.readthedocs.io/en/latest/modules/skrl.agents.ppo.html#spaces-and-models
 models_ppo = {}
-models_ppo["policy"] = Policy(env.observation_space, env.action_space, device, clip_actions=True)
+models_ppo["policy"] = Policy(env.observation_space, env.action_space, device)
 models_ppo["value"] = Value(env.observation_space, env.action_space, device)
 
 
@@ -99,13 +105,14 @@ cfg_ppo["value_preprocessor_kwargs"] = {"size": 1, "device": device}
 # logging to TensorBoard and write checkpoints each 500 and 5000 timesteps respectively
 cfg_ppo["experiment"]["write_interval"] = 500
 cfg_ppo["experiment"]["checkpoint_interval"] = 5000
+cfg_ppo["experiment"]["directory"] = "./runs"
 
 agent_ppo = PPO(models=models_ppo,
-               memory=memory,
-               cfg=cfg_ppo,
-               observation_space=env.observation_space,
-               action_space=env.action_space,
-               device=device)
+                memory=memory,
+                cfg=cfg_ppo,
+                observation_space=env.observation_space,
+                action_space=env.action_space,
+                device=device)
 
 
 # Configure and instantiate the RL trainer
